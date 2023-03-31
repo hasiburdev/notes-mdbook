@@ -3,6 +3,8 @@
 - [Welcome](./welcome.md)
 - [CSS](./css/SUMMARY.md)
   - [Flexbox](./css/flexbox.md)
+- [Git](./git/SUMMARY.md)
+  - [Editing Global Configuration](./git/global-configuration.md)
 - [GraphQL](./graphql/SUMMARY.md)
   - [Intro](./graphql/intro.md)
 - [JavaScript](./javascript/SUMMARY.md)

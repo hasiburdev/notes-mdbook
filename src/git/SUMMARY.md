@@ -1,9 +1,5 @@
 # Git
 
-## Changing Defaults and Global Settings
+Sections:
 
-Setting the default editor for Git
-
-```bash
-git config --global  core.editor "nvim"
-```
+- [Editing Global Configuration](./global-configuration.md)
