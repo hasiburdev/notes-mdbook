@@ -6,6 +6,7 @@ I'll be adding more topics here gradually. Hope it will help us.
 
 Chapters:
 
+- [Inbox](./inbox.md)
 - [CSS](./css/SUMMARY.md)
 - [GraphQL](./graphql/SUMMARY.md)
 - [JavaScript](./javascript/SUMMARY.md)

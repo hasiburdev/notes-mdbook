@@ -1,6 +1,7 @@
 # Summary
 
 - [Welcome](./welcome.md)
+- [Inbox](./inbox.md)
 - [CSS](./css/SUMMARY.md)
   - [Flexbox](./css/flexbox.md)
 - [Git](./git/SUMMARY.md)
