@@ -14,6 +14,7 @@
   - [Desktop Customization](./linux/desktop-customization.md)
   - [Netcat](./linux/netcat.md)
   - [Vim](./linux/vim.md)
+  - [SCP](./linux/scp.md)
 - [Next](./next/SUMMARY.md)
   - [getStaticProps with Components](./next/get-static-props-with-components.md)
 - [React](./react/SUMMARY.md)

@@ -53,3 +53,12 @@ To exit before finishing delete process, run:
 ```bash
 az group delete --no-wait
 ```
+
+## Testing
+
+Check the Testing Playground service.
+
+```ts
+screen.logTestingPlaygroundURL();
+screen.debug();
+```
