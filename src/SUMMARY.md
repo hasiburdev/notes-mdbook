@@ -17,6 +17,8 @@
   - [SCP](./linux/scp.md)
 - [Next](./next/SUMMARY.md)
   - [getStaticProps with Components](./next/get-static-props-with-components.md)
+- [NodeJs](./nodejs/SUMMARY.md)
+  - [Threads](./nodejs/threads.md)
 - [React](./react/SUMMARY.md)
   - [Text Editor Components](./react/text-editor.md)
 - [Rust](./rust/SUMMARY.md)
