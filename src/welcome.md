@@ -12,6 +12,7 @@ Chapters:
 - [JavaScript](./javascript/SUMMARY.md)
 - [Linux](./linux/SUMMARY.md)
 - [NextJs](./nextjs/SUMMARY.md)
+- [NodeJs](./nodejs/SUMMARY.md)
 - [React](./react/SUMMARY.md)
 - [Rust](./rust/SUMMARY.md)
 - [Sass](./sass/SUMMARY.md)
