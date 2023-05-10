@@ -62,3 +62,14 @@ Check the Testing Playground service.
 screen.logTestingPlaygroundURL();
 screen.debug();
 ```
+
+Prettier package.json command
+
+* Need to install prettier as a dev dependency.
+```bash
+pnpm add -D prettier
+```
+
+```js
+"format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+```
