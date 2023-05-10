@@ -1,0 +1,703 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Hasibur&#x27;s Notes</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="inbox.html"><strong aria-hidden="true">2.</strong> Inbox</a></li><li class="chapter-item expanded "><a href="css/SUMMARY.html"><strong aria-hidden="true">3.</strong> CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="css/flexbox.html"><strong aria-hidden="true">3.1.</strong> Flexbox</a></li></ol></li><li class="chapter-item expanded "><a href="git/SUMMARY.html"><strong aria-hidden="true">4.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/global-configuration.html"><strong aria-hidden="true">4.1.</strong> Editing Global Configuration</a></li></ol></li><li class="chapter-item expanded "><a href="graphql/SUMMARY.html"><strong aria-hidden="true">5.</strong> GraphQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="graphql/intro.html"><strong aria-hidden="true">5.1.</strong> Intro</a></li></ol></li><li class="chapter-item expanded "><a href="javascript/SUMMARY.html"><strong aria-hidden="true">6.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="javascript/thinking-in-algorithms.html"><strong aria-hidden="true">6.1.</strong> Thinking in Algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="linux/SUMMARY.html"><strong aria-hidden="true">7.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="linux/desktop-customization.html"><strong aria-hidden="true">7.1.</strong> Desktop Customization</a></li><li class="chapter-item expanded "><a href="linux/netcat.html"><strong aria-hidden="true">7.2.</strong> Netcat</a></li><li class="chapter-item expanded "><a href="linux/vim.html"><strong aria-hidden="true">7.3.</strong> Vim</a></li><li class="chapter-item expanded "><a href="linux/scp.html"><strong aria-hidden="true">7.4.</strong> SCP</a></li></ol></li><li class="chapter-item expanded "><a href="next/SUMMARY.html"><strong aria-hidden="true">8.</strong> Next</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="next/get-static-props-with-components.html"><strong aria-hidden="true">8.1.</strong> getStaticProps with Components</a></li></ol></li><li class="chapter-item expanded "><a href="nodejs/SUMMARY.html"><strong aria-hidden="true">9.</strong> NodeJs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="nodejs/threads.html"><strong aria-hidden="true">9.1.</strong> Threads</a></li></ol></li><li class="chapter-item expanded "><a href="react/SUMMARY.html"><strong aria-hidden="true">10.</strong> React</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="react/text-editor.html"><strong aria-hidden="true">10.1.</strong> Text Editor Components</a></li></ol></li><li class="chapter-item expanded "><a href="rust/SUMMARY.html"><strong aria-hidden="true">11.</strong> Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rust/vector.html"><strong aria-hidden="true">11.1.</strong> Vector</a></li></ol></li><li class="chapter-item expanded "><a href="sass/SUMMARY.html"><strong aria-hidden="true">12.</strong> Sass</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sass/breakpoint.html"><strong aria-hidden="true">12.1.</strong> Breakpoint Snippet</a></li></ol></li><li class="chapter-item expanded "><a href="typescript/SUMMARY.html"><strong aria-hidden="true">13.</strong> TypeScript</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Hasibur&#x27;s Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="welcome-to-notes"><a class="header" href="#welcome-to-notes">Welcome to Notes</a></h1>
+<p>This repo contains notes on different topics that I encounterd and some topics that are frequently needed.</p>
+<p>I'll be adding more topics here gradually. Hope it will help us.</p>
+<p>Chapters:</p>
+<ul>
+<li><a href="./inbox.html">Inbox</a></li>
+<li><a href="./css/SUMMARY.html">CSS</a></li>
+<li><a href="./graphql/SUMMARY.html">GraphQL</a></li>
+<li><a href="./javascript/SUMMARY.html">JavaScript</a></li>
+<li><a href="./linux/SUMMARY.html">Linux</a></li>
+<li><a href="./nextjs/SUMMARY.html">NextJs</a></li>
+<li><a href="./nodejs/SUMMARY.html">NodeJs</a></li>
+<li><a href="./react/SUMMARY.html">React</a></li>
+<li><a href="./rust/SUMMARY.html">Rust</a></li>
+<li><a href="./sass/SUMMARY.html">Sass</a></li>
+<li><a href="./typescript/SUMMARY.html">TypeScript</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inbox"><a class="header" href="#inbox">Inbox</a></h1>
+<p>This place is to keep random notes. Will organize sometime in future.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Activity
+<ul>
+<li><input disabled="" type="checkbox"/>
+Commenting on Posts</li>
+<li><input disabled="" type="checkbox"/>
+Small video about porofolio website</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+Prepare message format</li>
+</ul>
+<h2 id="azure-nodejs-server-deploy-with-cli"><a class="header" href="#azure-nodejs-server-deploy-with-cli">Azure Node.js Server Deploy with CLI.</a></h2>
+<p>Installing Azure CLI on Linux.
+Use this oneline command to install Azure CLI on linux.</p>
+<pre><code class="language-bash">curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+</code></pre>
+<p>Login to Azure Account</p>
+<pre><code class="language-bash">az login
+</code></pre>
+<p>Deploying nodejs app for the first time.</p>
+<pre><code class="language-bash">az webapp up --sku F1 --name project_name
+</code></pre>
+<p>Here <code>--sku F1</code> is for Free Tier linux server and <code>--name project_name</code> is a unique name for the project.</p>
+<p>To redeploy a Server, just run this command in the project folder.</p>
+<pre><code class="language-bash">az webapp up
+</code></pre>
+<p>To view logs of the server, run this command:</p>
+<pre><code class="language-bash">az webapp log tail
+</code></pre>
+<p>To delete the project from azure, run this commad:</p>
+<pre><code class="language-bash">az group delete
+</code></pre>
+<p>To exit before finishing delete process, run:</p>
+<pre><code class="language-bash">az group delete --no-wait
+</code></pre>
+<h2 id="testing"><a class="header" href="#testing">Testing</a></h2>
+<p>Check the Testing Playground service.</p>
+<pre><code class="language-ts">screen.logTestingPlaygroundURL();
+screen.debug();
+</code></pre>
+<p>Prettier package.json command</p>
+<ul>
+<li>Need to install prettier as a dev dependency.</li>
+</ul>
+<pre><code class="language-bash">pnpm add -D prettier
+</code></pre>
+<pre><code class="language-js">&quot;format&quot;: &quot;prettier --write \&quot;src/**/*.{js,jsx,ts,tsx}\&quot;&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="css"><a class="header" href="#css">CSS</a></h1>
+<p>Sections:</p>
+<ul>
+<li><a href="css/./flexbox.html">Flexbox</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="css-1"><a class="header" href="#css-1">CSS</a></h1>
+<h2 id="flexbox"><a class="header" href="#flexbox">Flexbox</a></h2>
+<h3 id="flex-container"><a class="header" href="#flex-container">Flex container</a></h3>
+<p><strong>Properties</strong></p>
+<ul>
+<li><code>display:flex</code></li>
+<li><code>align-items</code></li>
+<li><code>justify-content</code></li>
+<li><code>flex-direction</code></li>
+<li><code>flex-flow</code></li>
+<li><code>align-content</code></li>
+</ul>
+<ul>
+<li><code>align-content: stretch</code> will adjust the height of the children boxes same as the largest height of any children.</li>
+</ul>
+<h3 id="flex-children"><a class="header" href="#flex-children">Flex children</a></h3>
+<p><strong>Properties</strong></p>
+<ul>
+<li><code>flex-basis</code></li>
+<li><code>order</code></li>
+<li><code>flex-grow</code></li>
+<li><code>flex-shrink</code></li>
+</ul>
+<p><code>flex-basis</code> </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git"><a class="header" href="#git">Git</a></h1>
+<p>Sections:</p>
+<ul>
+<li><a href="git/./global-configuration.html">Editing Global Configuration</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="changing-defaults-and-global-settings"><a class="header" href="#changing-defaults-and-global-settings">Changing Defaults and Global Settings</a></h2>
+<p>Setting the default editor for Git</p>
+<pre><code class="language-bash">git config --global  core.editor &quot;nvim&quot; # I am using neovim.
+
+# For vscode use this command
+git config --global core.editor &quot;code --wait&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="graphql"><a class="header" href="#graphql">GraphQL</a></h1>
+<p>Sections:</p>
+<ul>
+<li><a href="graphql/./intro.html">Intro</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-on-graphql"><a class="header" href="#notes-on-graphql">Notes on GraphQL</a></h1>
+<p>GraphQL is just a specification.</p>
+<p>Topics</p>
+<ul>
+<li>Type Definitions</li>
+<li>Resolvers</li>
+<li>Query Definitions</li>
+<li>Mutation Definitions</li>
+<li>Composition</li>
+<li>Schema</li>
+</ul>
+<p>Where does GraphQL fit in?</p>
+<ul>
+<li>A GraphQL server with a connected Database.</li>
+<li>A GraphQL server as a layer in foront of many 3rd party services and connects them all with one GraphQL API.</li>
+<li>A hybrid approach where a GraphQL server has a connected Database and also connections with 3rd party APIs.</li>
+</ul>
+<p>Node.js GraphQL Tools</p>
+<ul>
+<li>Servers
+<ul>
+<li>Apollo server</li>
+<li>graphql-js</li>
+<li>GraphQL Yoga</li>
+</ul>
+</li>
+<li>Services
+<ul>
+<li>AWS Amplify</li>
+</ul>
+</li>
+<li>Tools
+<ul>
+<li>Prisma</li>
+<li>GraphQL Playground</li>
+</ul>
+</li>
+</ul>
+<h3 id="creating-schema"><a class="header" href="#creating-schema">Creating Schema</a></h3>
+<p>Some ways to create a schema</p>
+<ul>
+<li>Using Schema Definition Language (SDL)</li>
+<li>Programmatically creating a Schema using language constructs.</li>
+</ul>
+<h3 id="creating-resolvers"><a class="header" href="#creating-resolvers">Creating Resolvers</a></h3>
+<ul>
+<li>Resolver names must be exact field name on your Schema's Types.</li>
+<li>Resolvers must return the value type declared for the matching schema.</li>
+<li>Resolvers can be async.</li>
+</ul>
+<h3 id="creating-servers"><a class="header" href="#creating-servers">Creating Servers</a></h3>
+<p><strong>Schema + Resolvers = Server</strong></p>
+<p>To create a server, the minimum requirement is a query type with a field and a resolver for that field.</p>
+<p>A simple example:</p>
+<pre><code class="language-javascript">const gql = require(&quot;graphql-tag&quot;);
+const { ApolloServer } = require(&quot;apollo-server&quot;);
+
+const typeDefs = gql`
+  type User {
+    email: String!
+    avatar: String
+    friends: [User]!
+  }
+  type Query {
+    me: User!
+  }
+`;
+
+const resolvers = {
+  Query: {
+    me() {
+      return {
+        email: &quot;test@test.com&quot;,
+        avatar: &quot;http://yoga.png&quot;,
+        friends: [],
+      };
+    },
+  },
+};
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
+
+server.listen(4000).then(() =&gt; {
+  console.log(`Listening on port:${4000}`);
+});
+</code></pre>
+<h3 id="input-type"><a class="header" href="#input-type">Input Type</a></h3>
+<ul>
+<li>Just like types, but used for arguments</li>
+<li>All field value types must be other input types or scalars.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
+<p>Sections:</p>
+<ul>
+<li><a href="javascript/./thinking-in-algorithms.html">Thinking in Algorithms</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="you-dont-know-algorithms-yet"><a class="header" href="#you-dont-know-algorithms-yet">You Don't Know Algorithms (Yet)</a></h1>
+<h2 id="thinking-in-algorithms"><a class="header" href="#thinking-in-algorithms">Thinking in Algorithms</a></h2>
+<p><strong>Premature optimization vs. Immature optimization</strong></p>
+<p>Common Data Structures</p>
+<ul>
+<li>Array, Stack, Queue</li>
+<li>Set, Object, Map</li>
+<li>Tree, Graph</li>
+</ul>
+<p>Common Algorithms</p>
+<ul>
+<li>Bubble Sort, Quick Sort</li>
+<li>Tree Traversal, Path Finding</li>
+<li>Binary Search</li>
+</ul>
+<p>Common Techniques</p>
+<ul>
+<li>Iteration</li>
+<li>Recursion</li>
+<li>Indexes, References</li>
+</ul>
+<p>Loose equality and strict equality works the same for two strings.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="summary"><a class="header" href="#summary">Summary</a></h1>
+<ul>
+<li><a href="linux/./desktop-customization.html">Desktop Customization</a></li>
+<li><a href="linux/./netcat.html">Netcat</a></li>
+<li><a href="linux/./vim.html">Vim</a></li>
+<li><a href="linux/./scp.html">SCP</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="desktop-customization"><a class="header" href="#desktop-customization">Desktop Customization</a></h1>
+<hr />
+<h2 id="installing-wallpaper-changer-variety"><a class="header" href="#installing-wallpaper-changer-variety">Installing wallpaper changer (variety)</a></h2>
+<p>1: Install variety</p>
+<pre><code class="language-bash">sudo apt install variety
+</code></pre>
+<p>2: Run this command to make it work in dark mode.</p>
+<pre><code class="language-bash">sed -i '/^# Gnome 3, Unity*/a gsettings set org.gnome.desktop.background picture-uri-dark &quot;file://$WP&quot; 2&gt; /dev/null' /home/$USER/.config/variety/scripts/set_wallpaper
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="netcat"><a class="header" href="#netcat">netcat</a></h1>
+<p>Binding a port in netcat.</p>
+<pre><code class="language-bash">netcat -k -l 8080
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vim"><a class="header" href="#vim">Vim</a></h1>
+<h2 id="vim-motions"><a class="header" href="#vim-motions">Vim Motions</a></h2>
+<p>One of the main part of vim is it's motions.</p>
+<h3 id="horizontal-motion"><a class="header" href="#horizontal-motion">Horizontal Motion</a></h3>
+<ul>
+<li><code>_</code> =&gt; Move to the starting character of current line.</li>
+<li><code>$</code> =&gt; Move to the end of current line.</li>
+<li><code>0</code> =&gt; Move to the beginning of the current line.</li>
+</ul>
+<p><code>f</code> + <code>any character</code> moves to that character forward. <code>;</code> and <code>,</code> are the keys to navigate forward and backward.
+<code>F</code> + <code>any character</code> moves to that character backward.</p>
+<h3 id="vertical-motion"><a class="header" href="#vertical-motion">Vertical Motion</a></h3>
+<ul>
+<li>
+<p><code>{</code> move up by paragraph.</p>
+</li>
+<li>
+<p><code>}</code> move down by paragraph.</p>
+</li>
+<li>
+<p><code>Ctrl</code> + <code>d</code> =&gt; Jump half page down.</p>
+</li>
+<li>
+<p><code>Ctrl</code> + <code>u</code> =&gt; Jump half page up.</p>
+</li>
+<li>
+<p><code>gg</code> =&gt; Move to the top of the page.</p>
+</li>
+<li>
+<p><code>G</code> =&gt; Move to the bottom of the page.</p>
+</li>
+</ul>
+<h2 id="searching"><a class="header" href="#searching">Searching</a></h2>
+<p>Searching something in vim.</p>
+<ul>
+<li>Typing <code>/</code> in command mode with start searching whatever is typed after it. Typing <code>n</code> will go to the next search result. <code>N</code> will go to the reverse direction.</li>
+<li>Typing <code>?</code> will start a backward search where <code>n</code> will go to the previous results.</li>
+<li>Typing <code>*</code> will search the word the cursor is currently in.</li>
+<li>Typing <code>#</code> will search the current word in reverse order.</li>
+</ul>
+<h2 id="files"><a class="header" href="#files">Files</a></h2>
+<ul>
+<li><code>%</code> on the file tree page to create a new file.</li>
+</ul>
+<h3 id="saving-files-in-vim"><a class="header" href="#saving-files-in-vim">Saving files in Vim</a></h3>
+<p>There are multiple ways to save files and exit vim.</p>
+<ul>
+<li><code>:wq</code></li>
+<li><code>:x</code></li>
+<li><code>Shift+zz</code></li>
+</ul>
+<h2 id="additional-features"><a class="header" href="#additional-features">Additional Features</a></h2>
+<h3 id="spell-checker"><a class="header" href="#spell-checker">Spell Checker</a></h3>
+<ul>
+<li>To enable spell checker, use the following command.
+<code>:set spell</code></li>
+<li>To disable spell checker, use the command:</li>
+</ul>
+<h3 id="change-letter-casing"><a class="header" href="#change-letter-casing">Change letter casing</a></h3>
+<p>To change a letter from uppercase to lowercase or reverse, use <code>~</code>.</p>
+<hr />
+<p>Lsp commands</p>
+<ul>
+<li>
+<p><code>gd</code> =&gt; Goto definition.</p>
+</li>
+<li>
+<p>Telescope</p>
+<ul>
+<li><code>&lt;leader&gt;ws</code> =&gt; Workspace symbols.</li>
+<li><code>&lt;Space&gt;ds</code>  =&gt; Document symbols.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scp"><a class="header" href="#scp">SCP</a></h1>
+<p>Upload a folder to a remote machine</p>
+<pre><code class="language-bash">scp -r ~/local_dir user@host.com:~/Documents/target_folder
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nextjs"><a class="header" href="#nextjs">NextJs</a></h1>
+<p>Sections:</p>
+<ul>
+<li><a href="next/./get-static-props-with-components.html">getStaticProps with Components</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nextjs-1"><a class="header" href="#nextjs-1">NextJs</a></h1>
+<p><a href="https://dev.to/brewhousedigital/nextjs-getstaticprops-with-components-f25">NextJS getStaticProps With Components</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nodejs"><a class="header" href="#nodejs">NodeJs</a></h1>
+<ul>
+<li><a href="nodejs/./threads.html">Threads</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nodejs-threads"><a class="header" href="#nodejs-threads">NodeJs Threads</a></h1>
+<p>Change the number of threads created in thread pool:</p>
+<p>This is an environment variable for defining how many threads NodeJs process should create.</p>
+<pre><code class="language-js">process.env.UV_THREADPOOL_SIZE = 2
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="react"><a class="header" href="#react">React</a></h1>
+<p>Sections:</p>
+<ul>
+<li><a href="react/./text-editor.html">Text Editor Components</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="react-notes"><a class="header" href="#react-notes">React Notes</a></h1>
+<p>Some popular code editors for browsers are:</p>
+<ul>
+<li>CodeMirror
+<ul>
+<li>Easy to use</li>
+<li>Doesn't have many out-of-the box feature</li>
+</ul>
+</li>
+<li>Ace Editor
+<ul>
+<li>Moderately easy to use</li>
+<li>Widely used</li>
+</ul>
+</li>
+<li>Monaco Editor
+<ul>
+<li>Hardest to setup</li>
+<li>Gives an almost-prefect editing experience immediately</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<p>Sections:</p>
+<ul>
+<li><a href="rust/./vector.html">Vector</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+<p>Sorting a vector descending</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>vector.sort_by(|a,b| b.cmp(a));
+<span class="boring">}</span></code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sass"><a class="header" href="#sass">SASS</a></h1>
+<p>Sections:</p>
+<ul>
+<li><a href="sass/./breakpoint.html">Breakpoint Snippet</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sass-1"><a class="header" href="#sass-1">SASS</a></h1>
+<p>Code from Alif vai:</p>
+<pre><code class="language-scss">// Breakpoint viewport sizes and media queries.
+//
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//
+//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px)
+//
+// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
+ 
+// Name of the next breakpoint, or null for the last breakpoint.
+//
+//    &gt;&gt; breakpoint-next(sm)
+//    md
+//    &gt;&gt; breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//    md
+//    &gt;&gt; breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl xxl))
+//    md
+ 
+$grid-breakpoints: (
+  zero: 0,
+  xs: 400px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+ 
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $n: index($breakpoint-names, $name);
+    @if not $n {
+        @error &quot;breakpoint `#{$name}` not found in `#{$breakpoints}`&quot;;
+    }
+    @return if($n &lt; length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+ 
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    &gt;&gt; breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//    576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min, null);
+}
+ 
+// Maximum breakpoint width.
+// The maximum value is reduced by 0.02px to work around the limitations of
+// `min-` and `max-` prefixes and viewports with fractional widths.
+// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+// See https://bugs.webkit.org/show_bug.cgi?id=178261
+//
+//    &gt;&gt; breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//    767.98px
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+    $max: map-get($breakpoints, $name);
+    @return if($max and $max &gt; 0, $max - .02, null);
+}
+ 
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
+// Useful for making responsive utilities.
+//
+//    &gt;&gt; breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//    &quot;&quot;  (Returns a blank string)
+//    &gt;&gt; breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//    &quot;-sm&quot;
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, &quot;&quot;, &quot;-#{$name}&quot;);
+}
+  
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+  
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+    $max: breakpoint-max($name, $breakpoints);
+    @if $max {
+        @media (max-width: $max) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+  
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($lower, $breakpoints);
+    $max: breakpoint-max($upper, $breakpoints);
+ 
+    @if $min != null and $max != null {
+        @media (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else if $max == null {
+        @include media-breakpoint-up($lower, $breakpoints) {
+            @content;
+        }
+    } @else if $min == null {
+        @include media-breakpoint-down($upper, $breakpoints) {
+            @content;
+        }
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="typescript"><a class="header" href="#typescript">TypeScript</a></h1>
+<p>It's empty!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
